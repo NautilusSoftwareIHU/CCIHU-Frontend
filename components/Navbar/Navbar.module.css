@@ -2,9 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1rem;
+  height: 7vh;
+  width: 100vw;
+  background: #282828;
+  color: white;
 }
 
 .navbar a {
   margin-right: 0.5rem;
+  color: white;
+}
+.pages{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-right: 20px;
+}
+.name{
+  margin-left: 20px;
 }
