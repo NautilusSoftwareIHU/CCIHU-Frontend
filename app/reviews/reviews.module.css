@@ -3,7 +3,6 @@
     width: 100vw;
     height: 86vh;
     color: white;
-    font-family: fantasy;
     font-size: 24px;
     display: flex;
     flex-direction: column;
@@ -32,36 +31,26 @@
     border-radius: 25px;
     border: none;
 }
-.button{
-    width: 80px;
-    height: 35px;
-    border-radius: 25px;
-    border: none;
-    background-color:#0074D2;
-    margin-left: 10px;
-}
-.button:hover{
-    color: white;
-    background-color:#1b8deb ;
-    transform: scale(1.05);
-    transition: all ease 0.3s;
-    cursor: pointer;
-}
-.latestmatches{
+.latestmatches,.leaderboard{
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-family: Quicksand;
-}
-.leaderboard{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: Quicksand;
 }
 .results{
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-family: Quicksand;
+}
+.username{
+    color: black;
+}
+.button{
+    border: none;
+    height: 30px;
+    border-radius: 15px;
+}
+.button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all ease 0.3s;
 }

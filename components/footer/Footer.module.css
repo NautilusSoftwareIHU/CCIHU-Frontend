@@ -4,12 +4,10 @@
     background: #2D2D2D;
     width: 100vw;
     color: white;
-    font-family: fantasy;
     font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: Quicksand;
     font-size: 25px;
     position: fixed;
     bottom: 0;
