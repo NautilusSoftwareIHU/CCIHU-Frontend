@@ -1,0 +1,19 @@
+.Footer {
+  padding: 1rem;
+  flex-shrink: 0;
+  background: #2d2d2d;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+}
+.comp {
+  margin-left: 20px;
+}
+.comp2 {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}

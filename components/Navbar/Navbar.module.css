@@ -2,9 +2,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 1rem;
+  background: #282828;
+  color: white;
+  padding: 0 1rem;
+}
+
+.navbar h1 {
+  color: #0074d2;
 }
 
 .navbar a {
   margin-right: 0.5rem;
+  color: white;
+}
+
+.pages {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.pages a {
+  text-decoration: none;
+}
+
+.pages a:hover {
+  color: #0074d2;
 }
