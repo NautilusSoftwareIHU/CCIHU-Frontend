@@ -1,56 +1,62 @@
-.page{
-    background-color: #1C1C1C;
-    width: 100vw;
-    height: 86vh;
-    color: white;
-    font-size: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.page {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-.searchresultbox{
-    width: 754px;
-    height: 472px;
-    flex-shrink: 0;
-    opacity: 0.6;
-    background: #D9D9D9;
+.searchresultbox {
+  width: 754px;
+  height: 472px;
+  flex-shrink: 0;
+  opacity: 0.6;
+  background: #d9d9d9;
 }
 
-.row{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 200px;
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 200px;
 }
-.searchme{
-    width: 295px;
-    height: 35px;
-    border-radius: 25px;
-    border: none;
+
+.searchme {
+  width: 295px;
+  height: 35px;
+  padding: 0.3rem;
+  border-radius: 25px;
+  border: none;
+  outline: none; /* Optional: Removes the focus outline */
+  appearance: none; /* Optional: Removes the default arrow (browser-specific) */
 }
-.latestmatches,.leaderboard{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+
+.latestmatches,
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-.results{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+
+.results {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-.username{
-    color: black;
+
+.username {
+  color: black;
 }
-.button{
-    border: none;
-    height: 30px;
-    border-radius: 15px;
+
+.button {
+  border: none;
+  height: 30px;
+  border-radius: 15px;
 }
-.button:hover{
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: all ease 0.3s;
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all ease 0.3s;
 }

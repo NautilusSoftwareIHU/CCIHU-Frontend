@@ -1,7 +1,19 @@
-.mymatches{
-    width: 235px;
-    height: 641px;
-    flex-shrink: 0;
-    opacity: 0.4;
-    background: #D9D9D9;
+.container {
+  width: fit-content;
+  flex-shrink: 0;
+  background: #303030;
+  border-radius: 10px;
+}
+
+.match {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #4f4f4f;
+}
+
+.match:last-child {
+  border-bottom: none;
 }

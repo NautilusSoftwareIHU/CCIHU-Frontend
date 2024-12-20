@@ -2,22 +2,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 7vh;
-  width: 100vw;
   background: #282828;
   color: white;
+  padding: 0 1rem;
+}
+
+.navbar h1 {
+  color: #0074d2;
 }
 
 .navbar a {
   margin-right: 0.5rem;
   color: white;
 }
-.pages{
+
+.pages {
   display: flex;
   flex-direction: row;
   gap: 15px;
-  margin-right: 20px;
 }
-.name{
-  margin-left: 20px;
+
+.pages a {
+  text-decoration: none;
+}
+
+.pages a:hover {
+  color: #0074d2;
 }
