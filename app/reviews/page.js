@@ -13,12 +13,6 @@ const page = () => {
   ];
 
   const [SearchTerm, setSearchTerm] = useState("");
-  const [showElement, setShowElement] = useState(false);
-
-  const HandleAddRating = (myid) => {
-    setShowElement(true);
-    console.log(myid);
-  };
 
   return (
     <>
@@ -36,9 +30,7 @@ const page = () => {
           <div className={styles.latestmatches}>
             <h3>Latest Matches</h3>
             <Matches minHeight="641px">
-              <ul>
-                <li>Hello</li>
-              </ul>
+              
             </Matches>
           </div>
           <div className={styles.results}>

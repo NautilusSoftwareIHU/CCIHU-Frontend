@@ -3,6 +3,10 @@
   flex-shrink: 0;
   background: #303030;
   border-radius: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6b6b6b #303030;
 }
 
 .match {
@@ -16,4 +20,15 @@
 
 .match:last-child {
   border-bottom: none;
+}
+
+@media (max-width:765px){
+  .match {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #4f4f4f;
+  }
 }

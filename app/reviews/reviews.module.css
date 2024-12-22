@@ -45,10 +45,6 @@
   text-align: center;
 }
 
-.username {
-  color: black;
-}
-
 .button {
   border: none;
   height: 30px;
@@ -59,4 +55,16 @@
   cursor: pointer;
   transform: scale(1.03);
   transition: all ease 0.3s;
+}
+
+@media (max-width:765px) {
+  .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    gap: 20px;
+  }
+
 }
