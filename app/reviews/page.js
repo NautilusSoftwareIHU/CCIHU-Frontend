@@ -10,8 +10,18 @@ const page = () => {
     { id: 4, username: "George Pap", review: "Great app!", rating: 5 },
     { id: 5, username: "John Perd", review: "Needs improvement.", rating: 3 },
     { id: 6, username: "Nikos Prss", review: "Very user-friendly.", rating: 4 },
+    { id: 7, username: "John Passias", review: "Great Driver!", rating: 5 },
+    { id: 8, username: "Jane Smith", review: "Needs improvement.", rating: 3 },
+    { id: 9, username: "Mike Ross", review: "Very friendly.", rating: 4 },
+    { id: 10, username: "George Pap", review: "Great app!", rating: 5 },
+    { id: 11, username: "John Perd", review: "Needs improvement.", rating: 3 },
+    { id: 12, username: "Nikos Prss", review: "Very user-friendly.", rating: 4 },
   ];
 
+
+  const getOrderedReviews = (reviews) =>{
+    return [...reviews].sort((a,b)=>a.rating-b.rating).slice(0,10);
+  }
   const [SearchTerm, setSearchTerm] = useState("");
 
   return (
@@ -29,9 +39,11 @@ const page = () => {
         <div className={styles.row}>
           <div className={styles.latestmatches}>
             <h3>Latest Matches</h3>
-            <Matches minHeight="641px">
-              
-            </Matches>
+            <div className={styles.latest}>
+              <ol>
+                <li>Display lates matches as an object</li>
+              </ol>
+            </div>
           </div>
           <div className={styles.results}>
             <h2>Results</h2>
@@ -44,7 +56,15 @@ const page = () => {
           </div>
           <div className={styles.leaderboard}>
             <h3>Leaderboard</h3>
-            <Matches minHeight="641px" />
+            <div className={styles.leader}> 
+              <ol>
+                {getOrderedReviews(reviews).map((review,index)=>(
+                  <li key={review.id} className={styles.leaderItem}>
+                    <strong> {review.username}</strong>: {review.rating}/5
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
         </div>
       </div>

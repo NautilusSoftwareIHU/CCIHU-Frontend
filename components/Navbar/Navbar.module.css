@@ -28,4 +28,5 @@
 
 .pages a:hover {
   color: #0074d2;
+  transition: all ease 0.25s;
 }
