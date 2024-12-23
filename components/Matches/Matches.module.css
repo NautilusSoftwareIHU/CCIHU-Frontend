@@ -22,13 +22,13 @@
   border-bottom: none;
 }
 
-@media (max-width:765px){
+@media (max-width: 1150px) {
   .match {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-bottom: 1px solid #4f4f4f;
+  }
+
+  .container {
+    width: 100% !important;
+    border-radius: 0;
   }
 }
