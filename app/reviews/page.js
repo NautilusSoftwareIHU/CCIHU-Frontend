@@ -20,7 +20,7 @@ const page = () => {
 
 
   const getOrderedReviews = (reviews) =>{
-    return [...reviews].sort((a,b)=>a.rating-b.rating).slice(0,10);
+    return [...reviews].sort((a,b)=>b.rating-a.rating).slice(0,10);
   }
   const [SearchTerm, setSearchTerm] = useState("");
 
@@ -58,7 +58,7 @@ const page = () => {
             <h3>Leaderboard</h3>
             <div className={styles.leader}> 
               <ol>
-                {getOrderedReviews(reviews).map((review,index)=>(
+                {getOrderedReviews(reviews).map((review)=>(
                   <li key={review.id} className={styles.leaderItem}>
                     <strong> {review.username}</strong>: {review.rating}/5
                   </li>
