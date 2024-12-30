@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./reviews.module.css";
+import Usericon from "@/components/Usericon/Usericon";
 import Matches from "@/components/Matches/Matches";
 const page = () => {
   const reviews = [
@@ -15,7 +16,7 @@ const page = () => {
     { id: 9, username: "Mike Ross", review: "Very friendly.", rating: 4 },
     { id: 10, username: "George Pap", review: "Great app!", rating: 5 },
     { id: 11, username: "John Perd", review: "Needs improvement.", rating: 3 },
-    {
+  {
       id: 12,
       username: "Nikos Prss",
       review: "Very user-friendly.",
@@ -26,6 +27,11 @@ const page = () => {
   const getOrderedReviews = (reviews) => {
     return [...reviews].sort((a, b) => a.rating - b.rating).slice(0, 10);
   };
+
+  const getLatestMatches = (reviews)=>{
+    return[...reviews].sort((a,b)=>a.rating-b.rating).slice(0,5);
+  }
+
   const [SearchTerm, setSearchTerm] = useState("");
 
   return (
@@ -43,7 +49,15 @@ const page = () => {
         <div className={styles.row}>
           <div className={styles.latestmatches}>
             <h3>Latest Matches</h3>
-            <Matches />
+            <Matches 
+              listItems={getLatestMatches(reviews)}
+              minHeight="641px"
+              renderMethod={(item)=>(
+              
+             <div><Usericon/><p><strong>{item.username}</strong></p></div>
+          
+              )}
+            />
           </div>
           <div className={styles.results}>
             <h2>Results</h2>
