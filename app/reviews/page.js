@@ -23,16 +23,9 @@ const page = () => {
     },
   ];
 
-<<<<<<< HEAD
-
-  const getOrderedReviews = (reviews) =>{
-    return [...reviews].sort((a,b)=>b.rating-a.rating).slice(0,10);
-  }
-=======
   const getOrderedReviews = (reviews) => {
-    return [...reviews].sort((a, b) => a.rating - b.rating).slice(0, 10);
+    return [...reviews].sort((a, b) => b.rating - a.rating).slice(0, 10);
   };
->>>>>>> 3c700bb5951a42f0dcc4dd7b0464be6655a0f859
   const [SearchTerm, setSearchTerm] = useState("");
 
   return (
@@ -68,30 +61,18 @@ const page = () => {
               )}
             />
           </div>
+
           <div className={styles.leaderboard}>
             <h3>Leaderboard</h3>
-<<<<<<< HEAD
-            <div className={styles.leader}> 
-              <ol>
-                {getOrderedReviews(reviews).map((review)=>(
-                  <li key={review.id} className={styles.leaderItem}>
-                    <strong> {review.username}</strong>: {review.rating}/5
-                  </li>
-                ))}
-              </ol>
-=======
-            <div className={styles.leaderboard}>
-              <Matches
-                listItems={getOrderedReviews(reviews)}
-                minHeight="641px"
-                renderMethod={(item) => (
-                  <p>
-                    <strong>{item.username}</strong>: {item.rating}/5
-                  </p>
-                )}
-              />
->>>>>>> 3c700bb5951a42f0dcc4dd7b0464be6655a0f859
-            </div>
+            <Matches
+              listItems={getOrderedReviews(reviews)}
+              minHeight="641px"
+              renderMethod={(item) => (
+                <p>
+                  <strong>{item.username}</strong>: {item.rating}/5
+                </p>
+              )}
+            />
           </div>
         </div>
       </div>
