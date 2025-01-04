@@ -28,7 +28,8 @@
   }
 
   .container {
-    width: 100% !important;
+    margin: auto;
+    width: 80% !important;
     border-radius: 0;
   }
 }

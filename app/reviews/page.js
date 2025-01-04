@@ -16,7 +16,7 @@ const page = () => {
     { id: 9, username: "Mike Ross", review: "Very friendly.", rating: 4 },
     { id: 10, username: "George Pap", review: "Great app!", rating: 5 },
     { id: 11, username: "John Perd", review: "Needs improvement.", rating: 3 },
-  {
+    {
       id: 12,
       username: "Nikos Prss",
       review: "Very user-friendly.",
@@ -28,9 +28,9 @@ const page = () => {
     return [...reviews].sort((a, b) => b.rating - a.rating).slice(0, 10);
   };
 
-  const getLatestMatches = (reviews)=>{
-    return[...reviews].sort((a,b)=>a.rating-b.rating).slice(0,5);
-  }
+  const getLatestMatches = (reviews) => {
+    return [...reviews].sort((a, b) => a.rating - b.rating).slice(0, 5);
+  };
 
   const [SearchTerm, setSearchTerm] = useState("");
 
@@ -49,13 +49,18 @@ const page = () => {
         <div className={styles.row}>
           <div className={styles.latestmatches}>
             <h3>Latest Matches</h3>
-            <Matches 
+            <Matches
               listItems={getLatestMatches(reviews)}
               minHeight="641px"
-              renderMethod={(item)=>(
-              
-             <div><Usericon/><p><strong>{item.username}</strong></p></div>
-          
+              renderMethod={(item) => (
+                <div>
+                  <div className={styles.icon}>
+                    <Usericon />
+                  </div>
+                  <p>
+                    <strong>{item.username}</strong>
+                  </p>
+                </div>
               )}
             />
           </div>
@@ -82,9 +87,14 @@ const page = () => {
               listItems={getOrderedReviews(reviews)}
               minHeight="641px"
               renderMethod={(item) => (
-                <p>
-                  <strong>{item.username}</strong>: {item.rating}/5
-                </p>
+                <div>
+                  <div className={styles.icon}>
+                    <Usericon />
+                  </div>
+                  <p>
+                    <strong>{item.username}</strong>: {item.rating}/5
+                  </p>
+                </div>
               )}
             />
           </div>

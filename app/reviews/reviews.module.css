@@ -52,6 +52,10 @@
   transition: all ease 0.3s;
 }
 
+.icon {
+  display: flex;
+  justify-content: center;
+}
 .latestmatches,
 .leaderboard {
   text-align: center;
