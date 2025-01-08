@@ -45,7 +45,10 @@
   height: 30px;
   border-radius: 15px;
 }
-
+.latestitem {
+  display: flex;
+  flex-direction: row;
+}
 .button:hover {
   cursor: pointer;
   transform: scale(1.03);
@@ -54,8 +57,10 @@
 
 .icon {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
+
 .latestmatches,
 .leaderboard {
   text-align: center;
@@ -66,6 +71,12 @@
     padding: 2rem 0;
   }
 
+  .latestitem {
+    flex-direction: column;
+  }
+  .icon {
+    justify-content: center;
+  }
   .row {
     flex-direction: column;
   }
